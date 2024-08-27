@@ -22,7 +22,7 @@
     
 }
 
-.dark-mode:root{
+/* .dark-mode:root{
     --corPrincipal: #3783e0;
     --corSecundaria: #011B3A;
     --corTerciaria: #FFA400;
@@ -30,12 +30,12 @@
     --corFundo: #161616;
     --CorfonteSecundária: black;
     --BackgroundColorBox: #ffb01f;
-    --AutoColor: var(--corTerciaria); /*Utiliza a cor de destaque do próprio modo*/
-    --ReverseColor: var(--corPrincipal); /*Utiliza a cor destaque do outro modo*/
+    --AutoColor: var(--corTerciaria); 
+    --ReverseColor: var(--corPrincipal); 
     --UnderLine: #bdbdbd;
     --Fornecedores: #3783e0;
     --BorderButton: #266ec5;
-}
+} */
 
 p{
     color: var(--corFonte);
@@ -45,22 +45,22 @@ p{
 
 h1{
     font-size: clamp(2rem, 2rem + 2vw, 4rem);
-    color: var(--AutoColor);
+    color: var(--AutoColor) !important;
 }
 
 h2{
     font-size: clamp(2.5rem, 1rem + 2vw,3.5rem);
-    color: var(--ReverseColor);
+    color: var(--ReverseColor) !important;
 }
 
 h3{
-    color: var(--AutoColor);
+    color: var(--AutoColor) !important;
     font-size: clamp(1rem, 1rem + 1vw, 3.3rem);
 }
 
 strong{
     font-size: inherit;
-    color: var(--AutoColor);
+    color: var(--AutoColor) !important;
 }
 
 *{
@@ -74,4 +74,10 @@ a{
 
 body{
     background-color: var(--corFundo) !important;
+    display: flex;
+    flex-direction: column;
+    
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

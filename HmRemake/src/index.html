@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>HmRemake</title>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-QO6BBxGkDzAnKo5Up/9DGH1kWmskxjSUFAmF0PBJN8yGKYYrjQO0HGX+Ifl9R9Fl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-P1B8LsmORPZ6Hb/zvSnmA8WvOXytG8Q7JpTDLZ+qqL6M/sLNEhJr4+d0HtFANy9D" crossorigin="anonymous"></script>
 
+  
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
   
@@ -12,24 +15,28 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
  
 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+  
   <app-root></app-root>
-  <script>
-    const pref = window.matchMedia('(prefers-color-scheme: dark)').matches
-    console.log(pref)
 
-        
-if(pref == true){ 
-    console.log("rolou")
-    $('html').addClass('dark-mode')
-    $('#logo_hm').attr('src', 'logo/hmCleanLogoDarkmode.svg')
-    
-} else {
-    $('html').removeClass('dark-mode')
-    $('#logo_hm').attr('src', 'logo/hmCleanLogo.svg')
-}
-</script>
+  <script>
+      const pref = window.matchMedia('(prefers-color-scheme: dark)').matches
+      console.log(pref)
+
+          
+  if(pref == true){ 
+      console.log("rolou")
+      $('html').addClass('dark-mode')
+      $('#logo_hm').attr('src', 'logo/hmCleanLogoDarkmode.svg')
+      
+  } else {
+      $('html').removeClass('dark-mode')
+      $('#logo_hm').attr('src', 'logo/hmCleanLogo.svg')
+  }
+  </script>
 
 </body>
 
