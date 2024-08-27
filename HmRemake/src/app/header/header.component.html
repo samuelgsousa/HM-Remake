@@ -1,21 +1,22 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">MinhaApp</a>
-    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div [collapse]="isCollapsed" class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/about']">Sobre</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/contact']">Contato</a>
-        </li>
-      </ul>
-    </div>
+<header>
+  <div class="headerContent">
+    
+    <img src="" alt="logo" id="logo_hm">
+
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+      <li ngbNavItem>
+        <a class="nav-link " aria-current="page" [routerLink]="['']">Início</a>
+      </li>
+      <li ngbNavItem>
+        <a class="nav-link" [routerLink]="['/sobre']">Sobre</a>
+      </li>
+      <li ngbNavItem>
+        <a class="nav-link" [routerLink]="['/orcamento']">Orçamento</a>
+      </li>
+      <li ngbNavItem>
+        <a class="nav-link" [routerLink]="['/fornecedores']">Fornecedores</a>
+      </li>
+    </ul>
   </div>
-</nav>
+  <router-outlet></router-outlet>
+</header>
