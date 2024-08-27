@@ -1,0 +1,250 @@
+
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+p{
+    font-size: var(--TextoPadrao);
+}
+
+h1{
+    color: var(--corFonte);
+    text-align: center;
+    font-size: clamp(2rem, 3rem + 2vw,5rem);
+    margin-top: 3rem;
+ }
+
+ #banner{
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    /*altura está sendo inserida dinamicamente com o javascript*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    gap: 5%;
+ }
+ 
+
+ #banner p{
+    font-size: clamp(2rem, 2rem + 2vw, 5rem);
+    text-align: center;
+    color: var(--FooterFontColor);
+ }
+
+.carrossel a{
+    width: 20%;
+    height: 10%;
+    text-decoration: none;
+}
+
+ #banner a button{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border-width: 3px;
+    border-color: var(--BorderButton);
+    font-size: clamp(0.5rem, 1rem + 1vw, 2rem);
+    background-color: var(--ReverseColor);
+    color: var(--FooterFontColor);
+    font-weight: 600;
+    padding-left: 2%;
+    padding-right: 2%;
+    cursor: pointer;
+ }
+
+
+ @media (max-width: 1020px){
+    .carrossel a{
+        width: 25%;
+        height: 10%;
+        }
+
+ }
+
+ @media (max-width: 680px){
+    .carrossel a{
+        width: 35%;
+        height: 12%;
+        }
+
+        #banner{
+            gap: 10%
+        }
+ }
+
+ @media (max-width: 500px){
+    .carrossel a{
+    width: 40%;
+    height: 15%;
+    }
+}
+
+@media (max-width: 375px){
+    .carrossel a{
+    width: 45%;
+    height: 20%;
+    }
+}
+
+    .carrossel{
+        overflow: hidden;
+        width: 100%;
+        max-height: 80vh;
+    }
+
+    .container{
+        display: flex;
+        transition: 0.7s ease-in-out;
+        transform: translateX(0);
+    }
+
+    .carrossel > .container > img{
+        object-fit: cover;
+        min-width: 100%;
+    }
+
+    #img2{
+        margin-top: clamp(-20%, -15% - 15rem ,0%);
+    }
+    #img3{
+        margin-top: -15%;
+    }
+
+  
+
+    #img4{
+        
+        margin-top: clamp(-10%, -15% - 15rem ,0%);
+    }
+
+    /*fim do carrossel*/
+
+    #desc-group{
+        display: flex;
+        justify-content: space-around;
+        gap: 1%;
+    }   
+   
+    #descricao, #icones{
+        margin-top: 15px;
+        width: 40%;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+    #descricao{
+        text-align: justify;
+        width: 30%;
+    }
+
+    
+
+    #descricao p{
+        font-size: 1.8rem;
+    }
+
+    #icones{
+        background-color: var(--BackgroundColorBox);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        /*não precisa de altura definida pois ele se adapta automáticamente*/
+        padding-top: 50px;
+    }
+
+    .icons{
+        width: 85px;
+        height: 164px;
+        margin: 3px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icons > img{
+        width: 64px;
+        height: 64px;
+    } 
+   
+    #icones div:last-child{
+        display: none;
+    }
+
+    @media (800px < width <960px){
+        #icones div:last-child{
+            display: flex;
+        }   
+    }
+
+
+
+    @media(min-width: 1200px){
+        #icones{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+        }
+
+      
+    }
+
+
+
+    .icons label {
+        font-size: 1.5rem;
+        font-weight: bolder;   
+        margin-top: 10%;
+        text-align: center;
+    }
+
+   
+
+
+
+    @media (max-width: 800px){ 
+        #desc-group{
+            flex-flow: column-reverse;
+            align-items: center;
+            justify-items: center;
+        }
+        #descricao{
+            width: 90%;
+            box-sizing: content-box;
+        }
+
+        #icones{
+            width: 90%;
+            gap: 10%;
+            height: 100%;
+            align-content: space-between;
+            justify-content: center;
+        }
+        
+    @media (max-width: 599px){ /*com pouco menos de 800px ainda ta bugando*/
+
+        #icones div:last-child{
+            display: flex;
+        }   
+    }
+
+    @media (max-width: 400px){
+        #icones div:last-child{
+            display: none;
+        }
+
+        #icones{
+            width: 90%;
+            gap: 10%;
+            height: 100%;
+            align-content: space-between;
+            justify-content: space-around;
+        }
+    }
+}
+

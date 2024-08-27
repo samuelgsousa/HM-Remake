@@ -1,0 +1,4 @@
+router-outlet {
+   display: block;
+   min-height: fit-content; /* Ou o espaço desejado */
+ }

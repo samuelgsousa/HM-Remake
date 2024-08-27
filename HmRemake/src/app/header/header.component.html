@@ -1,15 +1,22 @@
+<header>
+  <div class="headerContent">
+    
+    <img src="" alt="logo" id="logo_hm">
 
-<ul class="nav">
-  <li class="nav-item">
-    <a class="nav-link " aria-current="page" href="#">Início</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Sobre</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Orçamento</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" aria-disabled="true">Fornecedores</a>
-  </li>
-</ul>
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+      <li ngbNavItem>
+        <a class="nav-link " aria-current="page" [routerLink]="['']">Início</a>
+      </li>
+      <li ngbNavItem>
+        <a class="nav-link" [routerLink]="['/sobre']">Sobre</a>
+      </li>
+      <li ngbNavItem>
+        <a class="nav-link" [routerLink]="['/orcamento']">Orçamento</a>
+      </li>
+      <li ngbNavItem>
+        <a class="nav-link" [routerLink]="['/fornecedores']">Fornecedores</a>
+      </li>
+    </ul>
+  </div>
+  <router-outlet></router-outlet>
+</header>

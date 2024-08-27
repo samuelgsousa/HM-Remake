@@ -3,6 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>HmRemake</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+  
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -11,5 +15,22 @@
 </head>
 <body>
   <app-root></app-root>
+  <script>
+    const pref = window.matchMedia('(prefers-color-scheme: dark)').matches
+    console.log(pref)
+
+        
+if(pref == true){ 
+    console.log("rolou")
+    $('html').addClass('dark-mode')
+    $('#logo_hm').attr('src', 'logo/hmCleanLogoDarkmode.svg')
+    
+} else {
+    $('html').removeClass('dark-mode')
+    $('#logo_hm').attr('src', 'logo/hmCleanLogo.svg')
+}
+</script>
+
 </body>
+
 </html>

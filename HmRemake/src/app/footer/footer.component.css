@@ -1,0 +1,55 @@
+footer{
+    background-color: var(--corSecundaria);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;   
+    margin-top: 15px;
+    bottom: 1;
+    width: 100%;
+    position: absolute;
+}
+
+footer p{
+    color: var(--FooterFontColor);
+    font-size: 1.8rem;
+
+}
+
+#logo-inferior{
+    height: 55px;
+    margin-left: 5px;
+    margin-top:10px;
+    
+}
+
+#contato{
+    margin: auto;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#integracao{
+    margin-right: 15px;
+    display: flex;
+    column-gap: 8px;
+}
+#whatsapp, #email {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+@media (max-width: 460px){
+    footer{
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 15px;
+    }
+    #integracao{
+        margin-right: 0px;
+        margin-top: 10px;
+    }
+
+    #logo-inferior{
+        margin-left: 0px;
+    }
+}
