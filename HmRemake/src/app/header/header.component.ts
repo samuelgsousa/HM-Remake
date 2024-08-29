@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterLink, RouterModule } from '@angular/router';
 @Component({
@@ -9,5 +9,18 @@ import { RouterLink, RouterModule } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+
+
   active = 1;
+  isMenuOpen = false;
+
+  toggleMenu() {
+    console.log('teste')
+    const nav = document.querySelector('nav')
+    nav!.classList.toggle('active');
+
+  }
+
+
+  
 }

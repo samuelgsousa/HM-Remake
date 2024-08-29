@@ -10,7 +10,7 @@ import {NgbConfig, NgbToastModule, NgbCarousel, NgbCarouselModule, NgbModule } f
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  
+
 }
 
 //tenta criar um server depois
