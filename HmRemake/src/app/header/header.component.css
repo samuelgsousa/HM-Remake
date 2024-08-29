@@ -1,153 +1,93 @@
-header{
-    margin-bottom: 8px;
-    border-bottom: 0px;
-}
-
-.headerContent{
-    display: flex;
-    align-items: center;
-    /* height: 8vh; */
-    height: 8vh;
-}
-
-header ul{
-    justify-content: space-evenly;
-    width: 100%;
-    padding-right: 10%;
-
-}
-
-header li{
-    font-size: 2.5rem;
-}
-
 #logo_hm{
     width: 120px;   
     box-sizing: content-box !important;
-
 }
 
+div a{
+    font-family: 'Nunito';
+    color: #3783e0;
+}
+
+nav{
+    display: flex;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    flex-grow: 1;
+    margin-left: clamp(0%, -2.5% - 2.5vw,-5%);
+    justify-content: space-between !important;
+}
 
 ul{
-    margin-bottom: 8px;
-    border-bottom: none;
+    width: 100%;
+    justify-content: space-around;
 }
 
-/*fim do alinhamento com mais de 600px em flexbox*/
-
-/*alinhamento com menos de 600px de tela*/
-
-
-
-#btn-mobile{
-    /* display: none; */
-    
+.navbar-collapse li a:hover{
+    color: var(--AutoColor);
 }
-/*tem que fazer um evento de fechar menu quando ele estiver aberto, a largura aumentar e diminuir de novo*/
-@media(max-width: 850px){
 
-    #logo_hm{
-        margin-top: -10px;
-    }
+.navbar-collapse li a:active{
+    color: var(--Fornecedores);
+}
 
-    header{
-        justify-content: space-between;
-        height: 20%;
-    }
+.navbar-toggler{
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 100;
+    color: transparent;
+}
 
-    .nav{
-        padding-top: 10%;
-        display: flex; 
-        position: absolute;
-        width: 100%;
-        justify-content: start;
-        top: 1.5rem; /*mudar isso para tornar corretamente responsivo*/
-        flex-direction: column;
-        text-align: left;
-        height: 0px;
-        transition: .6s;
-        overflow-y: auto;
-        background-color: var(--corFundo);
-        z-index: 10000;
-        gap: 3%;
-    } 
-
-    ul.nav.nav-tabs{
-        padding-top: 10%;
-        display: flex; 
-        position: absolute;
-        width: 100%;
-        justify-content: start;
-        top: 1.5rem; /*mudar isso para tornar corretamente responsivo*/
-        flex-direction: column;
-        text-align: left;
-        height: 0px;
-        transition: .6s;
-        overflow-y: auto;
-        background-color: var(--corFundo);
-        z-index: 10000;
-        gap: 3%;
-    }
-    
-    .nav a{
-        color: var(--ReverseColor);
-        color: var(--corPrincipal);
-        text-align: center;
-        padding-bottom: 0.5rem;
-
-    }
-
-    nav a::after{
-        transform: none;
-    }
-    
-
-    #btn-mobile{
-        display: flex;
-        padding: .5rem 1rem;
-        font-size: 1rem;
-        border: none;
-        background: none;
-        cursor: pointer;
-        color: var(--corFonte);
-        z-index: 100000;
-        position: absolute;
-    }
+@media(min-width: 768px){
     #hamburger{
-        border-top: 2px solid;
-        width: 40px;
-    }
-    
-    #hamburger::after, #hamburger::before{
-        content: '';
-        display: block;
-        width: inherit;
-        height: 2px;
-        background-color: currentColor;
-        margin-top: 10px;
-        transition: .3s;
-        position: relative;
+        display: none;
     }
 
-    nav.active{ /*quando nav receber a classe active em jQuery o display será flex*/
-        height: 100%;
-        visibility: visible;
-        position: absolute;
-        z-index: 10000;
-    }
-    
-    #hamburger.active{ /*hamburger também recebe a classe active em jQuery*/
-        border-top-color: transparent;
-    }
-    
-    #hamburger.active::before{
-        transform: rotate(135deg);
-    }
-    
-    #hamburger.active::after{
-        transform: rotate(-135deg);
-        top: -12px; /*ajusta o "X" para ficar alinhado*/
-    }
-    
+
 }
 
+@media(max-width: 767px){
+
+    .navbar-collapse{
+        height: 130vh;
+    }
+
+}
+
+
+
+#hamburger{
+    border-top: 3px solid;
+    width: 40px;
+    color: #3783e0;
+
+}
+
+#hamburger::after, #hamburger::before{
+    content: '';
+    display: block;
+    width: inherit;
+    height: 3px;
+    background-color: currentColor;
+    margin-top: 10px;
+    transition: .3s;
+    position: relative;
+}
+#hamburger.active{ 
+    border-top-color: transparent;
+}
+
+#hamburger.active::before{
+    transform: rotate(135deg);
+    border-radius: 10px;
+}
+
+#hamburger.active::after{
+    transform: rotate(-135deg);
+    top: -12px; /*ajusta o "X" para ficar alinhado*/
+    border-radius: 10px;
+}

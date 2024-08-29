@@ -1,33 +1,34 @@
-<button id="btn-mobile" aria-expanded="false" aria-controls="nav" aria-haspopup="true" aria-label="Abrir Menu" (click)="toggleMenu()">
+<nav class="navbar navbar-expand-md navbar-light">
+  
 
-  <span id="hamburger"></span>
-</button>
+    <img src="" alt="logo" id="logo_hm">
 
-<header>
-  <div class="headerContent">
+		<button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed" (click)="toggleMenu()">
+			<span id="hamburger"></span>
+		</button>
 
-    <nav class="nav" orientation="vertical" role="menu" [class.active]="isMenuOpen">
-      
-      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
-        <li ngbNavItem>
-          <a class="nav-link" [routerLink]="['']">Início</a>
+		<div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+			<ul class="navbar-nav">
+        
+				<li class="nav-item" >
+					<a class="nav-link" role="button" [routerLink]="['']" (click)="collapsed = !collapsed"> Início </a>
         </li>
-        <li ngbNavItem>
-          <a class="nav-link" [routerLink]="['/sobre']">Sobre</a>
+
+        <li class="nav-item" >
+					<a class="nav-link" role="button" [routerLink]="['/sobre']" (click)="collapsed = !collapsed"> Sobre </a>
         </li>
-        <li ngbNavItem>
-          <a class="nav-link" [routerLink]="['/orcamento']">Orçamento</a>
+
+        <li class="nav-item" >
+					<a class="nav-link" role="button" [routerLink]="['/orcamento']" (click)="collapsed = !collapsed"> Orçamento </a>
         </li>
-        <li ngbNavItem>
-          <a class="nav-link" [routerLink]="['/fornecedores']">Fornecedores</a>
+
+        <li class="nav-item" >
+					<a class="nav-link" role="button" [routerLink]="['/fornecedores']" (click)="collapsed = !collapsed"> Fornecedores </a>
         </li>
-      </ul>
-    </nav>
+
+			</ul>
+		</div>
+</nav>
 
 
-
-  </div>
-
-
-</header>
-
+<router-outlet></router-outlet>
