@@ -16,7 +16,7 @@ export class AppComponent {
 
   title = 'HmRemake';
   
-  ngOnInit(): void{
+  ngOnInit(){
   
     const pref = window.matchMedia('(prefers-color-scheme: dark)').matches
     console.log(pref)
