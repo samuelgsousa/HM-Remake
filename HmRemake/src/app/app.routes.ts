@@ -4,6 +4,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { NgModule } from '@angular/core';
 import { OrcamentoComponent } from './orcamento/orcamento.component';
 import { FornecedoresComponent } from './fornecedores/fornecedores.component';
+import { ServicosComponent } from './servicos/servicos.component';
 
 export const routes: Routes = [
     {
@@ -25,6 +26,11 @@ export const routes: Routes = [
         path: 'fornecedores',
         component: FornecedoresComponent,
         title: 'Fornecedores'
+      },
+      {
+        path: 'servicos',
+        component: ServicosComponent,
+        title: 'Serviços'
       }
 ];
 
