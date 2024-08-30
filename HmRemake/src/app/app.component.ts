@@ -25,8 +25,8 @@ export class AppComponent {
         document.querySelector('#logo_hm')?.setAttribute('src', 'logo/hmCleanLogoDarkmode.svg')
   
     } else{
-      document.querySelector('html')?.classList.remove('dark-mode')
-      document.querySelector('#logo_hm')?.setAttribute('src', 'logo/hmCleanLogo.svg')
+      // document.querySelector('html')?.classList.remove('dark-mode')
+      // document.querySelector('#logo_hm')?.setAttribute('src', 'logo/hmCleanLogo.svg')
     }
   }
 
