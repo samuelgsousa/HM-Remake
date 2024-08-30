@@ -15,6 +15,19 @@ import { FooterComponent } from "./footer/footer.component";
 export class AppComponent {  
 
   title = 'HmRemake';
-
+  
+  ngOnInit(): void{
+  
+    const pref = window.matchMedia('(prefers-color-scheme: dark)').matches
+              
+    if(pref == true){ 
+        document.querySelector('html')?.classList.add('dark-mode')
+        document.querySelector('#logo_hm')?.setAttribute('src', 'logo/hmCleanLogoDarkmode.svg')
+  
+    } else{
+      document.querySelector('html')?.classList.remove('dark-mode')
+      document.querySelector('#logo_hm')?.setAttribute('src', 'logo/hmCleanLogo.svg')
+    }
+  }
 
 }
