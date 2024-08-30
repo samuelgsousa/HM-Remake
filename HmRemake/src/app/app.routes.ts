@@ -31,7 +31,8 @@ export const routes: Routes = [
         path: 'servicos',
         component: ServicosComponent,
         title: 'Serviços'
-      }
+      },
+      { path: '**', redirectTo: '' }
 ];
 
 NgModule({

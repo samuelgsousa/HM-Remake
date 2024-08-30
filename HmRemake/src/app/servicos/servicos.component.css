@@ -12,7 +12,12 @@ ngb-carousel img{
     object-fit: fill !important;
     }
 
-
+h1{
+    margin-bottom: 3%;
+    margin-top: 2%;
+    text-align: center;
+}
+     
 .desc{
     margin: auto;
     width: 70%;
@@ -20,8 +25,3 @@ ngb-carousel img{
     margin-top: 1.5%;
     text-align: justify;}
 
-h1{
-    margin-bottom: 3%;
-    margin-top: 2%;
-    text-align: center;
-}
