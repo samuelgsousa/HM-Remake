@@ -17,19 +17,19 @@ export class AppComponent {
   title = 'HmRemake';
   
   ngOnInit(): void{
+    console.log("teste")
+    // const pref = window.matchMedia('(prefers-color-scheme: dark)').matches
+    // console.log(pref)
+    // if(pref == true){ 
+    //   console.log("Deveria mostrar 1")
+    //     document.querySelector('html')?.classList.add('dark-mode')
+    //     document.querySelector('#logo_hm')?.setAttribute('src', 'logo/hmCleanLogoDarkmode.svg')
+    //     console.log("Deveria mostrar 2")
   
-    const pref = window.matchMedia('(prefers-color-scheme: dark)').matches
-    console.log(pref)
-    if(pref == true){ 
-      console.log("Deveria mostrar 1")
-        document.querySelector('html')?.classList.add('dark-mode')
-        document.querySelector('#logo_hm')?.setAttribute('src', 'logo/hmCleanLogoDarkmode.svg')
-        console.log("Deveria mostrar 2")
-  
-    } else{
-      document.querySelector('html')?.classList.remove('dark-mode')
-      document.querySelector('#logo_hm')?.setAttribute('src', 'logo/hmCleanLogo.svg')
-    }
+    // } else{
+    //   document.querySelector('html')?.classList.remove('dark-mode')
+    //   document.querySelector('#logo_hm')?.setAttribute('src', 'logo/hmCleanLogo.svg')
+    // }
   }
 
 }
