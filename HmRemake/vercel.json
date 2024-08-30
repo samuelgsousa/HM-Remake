@@ -2,6 +2,17 @@
 {
     "rewrites": [
       
-        {"source": "/(.*)", "destination": "/browser/index.html"}
-    ]
+        {"source": "/(.*)", "destination": "/browser/"}
+    ],
+    "headers": [
+        {
+          "source": "/polyfills-QBXW4TBJ.js",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/javascript"
+            }
+          ]
+        }
+      ]
 }
