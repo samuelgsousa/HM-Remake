@@ -12,6 +12,11 @@ import {NgbConfig, NgbToastModule, NgbCarousel, NgbCarouselModule, NgbModule } f
 })
 export class HomeComponent {
   
+  // ngOnInit(): void {
+  //   const carouselAdjust = () => {
+  //     const carousels = document.querySelector('ngb-carousel');
+  //   }
+  // }
 
 }
 
