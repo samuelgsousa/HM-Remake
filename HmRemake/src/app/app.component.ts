@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterOutlet, RouterModule } from '@angular/router';
 import { HeaderComponent} from './header/header.component';
 import { HomeComponent} from './home/home.component';
@@ -12,7 +12,7 @@ import { FooterComponent } from "./footer/footer.component";
   templateUrl:'./app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit{  
+export class AppComponent{  
 
   title = 'HmRemake';
   
